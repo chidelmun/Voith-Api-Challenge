@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voith API Challenge </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        code{
+            color: green;
+        }
+        p{
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+    <h1>Voith API Challenge </h1>
+    <p>This is the documentation page on how to use the API</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3><code>GET /places, /places/all</code></h3>
+            <p>This returns a list of all places</p>
+        </div>
+
+        <div class="col-sm-4">
+            <h3><code>GET /place/:id</code></h3>
+            <p>This returns a specific place with id specified in the path</p>
+            <p>Request Parameter: <code>id</code> </p>
+            <p>Example: <code> /place/25</code></p>
+            <p>Response: <code> 200 OK</code></p>
+        </div>
+
+        <div class="col-sm-4">
+            <h3><code>GET /places/search</code></h3>
+            <p>This this searches for items with the query in the request.
+                The search is performed on the name and description fields of the data items</p>
+            <p>Query Parameter: <code>searchText</code> </p>
+            <p>Example: <code> /places/search?searchText="Munich"</code></p>
+            <p>Response: <code> 200 OK</code></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "voith-api-challenge",
+  "version": "1.0.0",
+  "description": "This containerized application returns some mock data about places",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Delveri M Chick",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
