@@ -4,7 +4,7 @@
   "description": "This containerized application returns some mock data about places",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "Running Unit tests"
   },
   "keywords": [
     "Node"
