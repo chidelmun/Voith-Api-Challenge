@@ -40,18 +40,18 @@ expressApp.get('/', (req, res) => {
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-expressApp.get('/places', (req, res) => {
+expressApp.get('/api/places', (req, res) => {
     handleAllPlacesRequest(req, res);
 });
-expressApp.get('/places/all', (req, res) => {
+expressApp.get('/api/places/all', (req, res) => {
     handleAllPlacesRequest(req, res);
 });
 
-expressApp.get('/places/search', (req, res) => {
+expressApp.get('/api/places/search', (req, res) => {
     handleSearchRequest(req, res);
 });
 
-expressApp.get('/place/:id', (req, res) => {
+expressApp.get('/api/place/:id', (req, res) => {
     handlePlacesByIdRequest(req, res, parseInt(req.params.id));
 });
 
