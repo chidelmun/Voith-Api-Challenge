@@ -9,8 +9,11 @@ const express = require('express');
 const PORT = 8080;
 const HOST = '0.0.0.0';
 
+const places = new DataFactory();
+
+const expressApp = express();
+
 const handleAllPlacesRequest = (req, res) => {
-    const places = new DataFactory();
     let resData = places.findAll();
     if (req.query) {
         if (req.query.limit) {
@@ -21,21 +24,16 @@ const handleAllPlacesRequest = (req, res) => {
 }
 
 const handlePlacesByIdRequest = (req, res, id) => {
-    const places = new DataFactory();
     res.json(places.findPlaceById(id));
 }
 
 const handleSearchRequest = (req, res) => {
-    const places = new DataFactory();
-    console.log('*****RES****', req.query);
     const data = places.findAll().filter((item) => {
         return item.description.search(req.query.searchText) !== -1 || item.name.search(req.query.searchText) !== -1;
     })
     res.json(data);
 }
 
-// App
-const expressApp = express();
 expressApp.get('/', (req, res) => {
     res.sendFile(path.join(__dirname+'/index.html'));
 });
