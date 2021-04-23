@@ -26,24 +26,24 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <h3><code>GET /places, /places/all</code></h3>
+            <h3><code>GET /api/places, /api/places/all</code></h3>
             <p>This returns a list of all places</p>
         </div>
 
         <div class="col-sm-4">
-            <h3><code>GET /place/:id</code></h3>
+            <h3><code>GET /api/place/:id</code></h3>
             <p>This returns a specific place with id specified in the path</p>
             <p>Request Parameter: <code>id</code> </p>
-            <p>Example: <code> /place/25</code></p>
+            <p>Example: <code> /api/place/25</code></p>
             <p>Response: <code> 200 OK</code></p>
         </div>
 
         <div class="col-sm-4">
-            <h3><code>GET /places/search</code></h3>
+            <h3><code>GET /api/places/search</code></h3>
             <p>This this searches for items with the query in the request.
                 The search is performed on the name and description fields of the data items</p>
             <p>Query Parameter: <code>searchText</code> </p>
-            <p>Example: <code> /places/search?searchText="Heidenheim"</code></p>
+            <p>Example: <code> /api/places/search?searchText="Heidenheim"</code></p>
             <p>Response: <code> 200 OK</code></p>
         </div>
     </div>
